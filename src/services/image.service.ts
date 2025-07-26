@@ -15,9 +15,9 @@ export const fetchImageByBreedId = async (imageId: string): Promise<Image> => {
     headers
   })
 
-  const data = await response.json();
   if (!response.ok) {
     throw new Error(`Failed to fetch image id by breed ${response.statusText}`);
   }
+  const data = await response.json();
   return data;
 }

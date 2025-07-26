@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { Breed, CatBreeds } from "../models/breeds.model";
+import { Breed } from "../models/breeds.model";
 import dotenv from "dotenv"
 
 dotenv.config();
@@ -15,10 +15,10 @@ export const fetchCatBreeds = async () => {
 		headers,
 	})
 
-	const data = await response?.json();
 	if (!response.ok) {
 		throw new Error(`Failed to fetch cat breeds: ${response.statusText}`);
 	}
+	const data = await response?.json();
 	return data;
 }
 
@@ -28,10 +28,10 @@ export const fetchCatBreedById = async (id: string): Promise<Breed | null> => {
 		headers,
 	});
 
-	const data = (await response.json()) as Breed;
 	if (!response.ok) {
 		throw new Error(`Failed to fetch cat breeds by id: ${response.statusText}`);
 	}
+	const data = (await response.json()) as Breed;
 	return data;
 }
 
@@ -41,9 +41,9 @@ export const fetchCatbreedBySearch = async (search: any): Promise<any> => {
 		headers,
 	});
 
-	const data = await response.json();
 	if (!response.ok) {
 		throw new Error(`Failed to fetch cat breeds by id: ${response.statusText}`);
 	}
+	const data = await response.json();
 	return data;
 }
