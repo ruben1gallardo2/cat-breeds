@@ -1,0 +1,16 @@
+# CAT BREEDS API REST
+
+just for practice purpouse i will leave here the ENV variables, but this should not be done, so you can test
+teh project easier
+
+PORT=3000
+MONGODB_URI=mongodb://127.0.0.1:27017/xpert_groups
+JWT_SECRET=123456789
+API_KEY=live_JBT0Ah0Nt12iyl2IpjQVLDWjcLk0GQwf4zI9wBMfmfejKmcC31mOJp4yJz5TsOUP
+
+mongouri can change depending on environtment we are by conditioning it
+
+## run the project:
+
+- npm install
+- npm run dev
