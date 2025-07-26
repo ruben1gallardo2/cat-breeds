@@ -35,7 +35,7 @@ export const getCatbreedBySearch = async (req: Request, res: Response) => {
   try {
     const breeds: any[] = await fetchCatbreedBySearch(q);
     if (!breeds || !breeds.length) {
-      return res.status(400).json({ message: 'Breeds not found' });
+      return res.status(200).json([]);
     }
     return res.json(breeds);
   } catch (error) {
